@@ -1,0 +1,7 @@
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\bin\Debug\algo genetique.exe.config
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\bin\Debug\algo genetique.exe
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\bin\Debug\algo genetique.pdb
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.csprojAssemblyReference.cache
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.csproj.CoreCompileInputs.cache
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.exe
+C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.pdb
