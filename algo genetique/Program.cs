@@ -15,7 +15,13 @@ namespace algo_genetique
             daysSurvived = 0;
             choices = "";
         }
+
+        public void watchDay()
+        {
+
+        }
     }
+
     class Program
     {
         static Random aleatoire = new Random();
@@ -31,13 +37,19 @@ namespace algo_genetique
 
         static void Main(string[] args)
         {
-            int timeReproduceBoar=4;
-            int daysBeforeDie = 5;
-            int nbrIndividus = 100;
-            int nbrGenerations = 10;
+            //parameters
+            const int timeReproduceBoar = 115;
+            const int startWithBoars = 25;
+            const int daysBeforeDie = 7;
+            const int nbrIndividus = 500;
+            const int nbrGenerations = 1000;
+            const int daysToSurvive = 500;
+            const int probability = 100;// 1/100 chance for mutation
+            const int litter = 6 / 2; // litter of the boars (nbr boars/2 * litter)
+
             //choice for the individues : kill a boar (1) or wait next day (0)
             Person[] pop = new Person[nbrIndividus];
-            int daysToSurvive = 500;
+            Person best = new Person();
 
             //definition
             for (int i = 0; i < nbrIndividus; i++)
@@ -55,13 +67,15 @@ namespace algo_genetique
                 {
                     //Console.WriteLine(pop[i].choices); //show all the choices
                     int daysWithoutEat = 0;
-                    int meadow = 4; //start with 4 boars
+                    int meadow = startWithBoars; //start with 4 boars
                     pop[i].daysSurvived = 0;
                     foreach (var choice in pop[i].choices)
                     {
                         if ((pop[i].daysSurvived + 1) % timeReproduceBoar == 0)
                         {
-                            meadow += (int)Math.Floor((double)meadow / 2);
+                            if (meadow == 2147483647) continue;
+                            meadow += (int)Math.Floor((double)meadow * litter);
+                            if (meadow >= 2147483647 || meadow <= -10000) meadow = 2147483647;
                             //Console.WriteLine("The day "+ pop[i].daysSurvived + " had "+meadow+" boars.");
                         }
                         if (choice.Equals('0') || meadow == 0)
@@ -76,7 +90,7 @@ namespace algo_genetique
                         }
                         pop[i].daysSurvived++;
                     }
-                    Console.WriteLine("Number " + i + " survive " + pop[i].daysSurvived + " days with " + meadow + " boars.");
+                    //Console.WriteLine("Number " + i + " survive " + pop[i].daysSurvived + " days with " + meadow + " boars.");
                 }
 
                 //séléction
@@ -87,6 +101,7 @@ namespace algo_genetique
                     return user2.daysSurvived.CompareTo(user1.daysSurvived);
                 });
                 Console.WriteLine("Best : " + pop[0].daysSurvived);
+                if(g == nbrGenerations-1) best = pop[0];
 
                 //we keep the best 15
                 for (int i = 0; i < 15; i++)
@@ -119,13 +134,12 @@ namespace algo_genetique
                 }
 
                 //mutation
-                int probability = 100;// 1/100 chance
                 int pos = 0;
                 foreach (var chromosome in newGeneration)
                 {
-                    if (aleatoire.Next(probability + 1) == pos) //you get the mutation !!
+                    if (aleatoire.Next(probability + 1) == 1) //you get the mutation !!
                     {
-                        Console.WriteLine("mutation !!");
+                        //Console.WriteLine("mutation !!");
                         int pos1 = aleatoire.Next(chromosome.choices.Length); //swap between two random position
                         int pos2 = aleatoire.Next(chromosome.choices.Length);
                         char temp = chromosome.choices[pos1];
@@ -140,8 +154,7 @@ namespace algo_genetique
 
                 
             }
-
-                Console.ReadKey();
+            Console.ReadKey();
         }
         
 

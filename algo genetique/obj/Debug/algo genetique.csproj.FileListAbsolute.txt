@@ -5,3 +5,10 @@ C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug
 C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.csproj.CoreCompileInputs.cache
 C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.exe
 C:\Users\annes\OneDrive\cours\Master 2\algo génétique\algo genetique\obj\Debug\algo genetique.pdb
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\bin\Debug\algo genetique.exe.config
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\bin\Debug\algo genetique.exe
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\bin\Debug\algo genetique.pdb
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\obj\Debug\algo genetique.csproj.AssemblyReference.cache
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\obj\Debug\algo genetique.csproj.CoreCompileInputs.cache
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\obj\Debug\algo genetique.exe
+C:\Users\akoch2\Desktop\systèmes complexes\algo-g-n-tique\algo genetique\obj\Debug\algo genetique.pdb
