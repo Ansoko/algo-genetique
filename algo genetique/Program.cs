@@ -15,11 +15,6 @@ namespace algo_genetique
             daysSurvived = 0;
             choices = "";
         }
-
-        public void watchDay()
-        {
-
-        }
     }
 
     class Program
